@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consumir API</title>
+  <style media="screen">
+  p { cursor: pointer; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="_js/user.js"></script>
+  <script src="_js/category.js"></script>
+  <script src="_js/card.js"></script>
+</head>
+<body>
+  <div style="font-size:0">
+    <div style="width:50%; display:inline-table;font-size:15px">
+      <div id="categories">
+        <div class="inputs">
+          <input id="ca_id" type="hidden" name="" value="">
+          <input id="desc" type="text" name="" value="">
+          <button type="button" id="update" onclick="CATEGORY.updateCategory();" name="button">Update</button>
+          <button type="button" id="create" onclick="CATEGORY.createCategory();" name="button">Save</button>
+        </div>
+      </div>
+    </div>
+    <div style="width:50%; display:inline-table;font-size:15px">
+        <div class="inputs">
+          <input id="id_c" type="hidden" name="" value="">
+          <input id="tittle" type="text" name="" value="">
+          <input id="cdesc" type="text" name="" value="">
+          <button type="button" id="cupdate" onclick="CARD.updateCard();" name="button">Update</button>
+          <button type="button" id="ccreate" onclick="CARD.createCard();" name="button">Save</button>
+        </div>
+        <div id="cards">
+
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">
+  $( document ).ready(function() {
+
+    CATEGORY.getCategories();
+
+  });
+  </script>
+</body>
+</html>

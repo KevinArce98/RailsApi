@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Consumir API</title>
+  <style media="screen">
+  p { cursor: pointer; }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="_js/user.js"></script>
+  <script src="_js/category.js"></script>
+  <script src="_js/client.js"></script>
+</head>
+<body>
+  <div class="inputs">
+    <input id="client_id" type="hidden" name="" value="">
+    <input id="name" type="text" name="" value="" placeholder="Name">
+    <input id="legal_number" type="text" name="" value="" placeholder="Legal Number">
+    <input id="web_page" type="text" name="" value="" placeholder="Web Page">
+    <input id="address" type="text" name="" value="" placeholder="Address">
+    <input id="phone" type="text" name="" value="" placeholder="Phone Number">
+    <select id="sector">
+      <option value="volvo">Education</option>
+      <option value="saab">Industry</option>
+      <option value="fiat">Manufacturing</option>
+      <option value="audi">Services</option>
+      <option value="audi">Other</option>
+    </select>
+    <button type="button" id="update" onclick="CLIENT.updateClient();" name="button">Update</button>
+    <button type="button" id="create" onclick="CLIENT.createClient();" name="button">Save</button>
+  </div>
+
+  <div id="clients">
+    
+  </div>
+
+  <script type="text/javascript">
+  $( document ).ready(function() {
+
+    CLIENT.getClients();
+
+  });
+  </script>
+</body>
+</html>
